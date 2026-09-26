@@ -1,13 +1,33 @@
 ---
 import { getCollection } from "astro:content";
-import BaseLayout from '../layouts/BaseLayout.astro';
-import BlogPost from '../components/BlogPost.astro';
-const pageTitle = "Mi blog de aprendizaje con Astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogPost from "../components/BlogPost.astro";
+
+const pageTitle = "Reseñas de Spider-Man";
 const allPosts = await getCollection("blog");
 ---
 <BaseLayout pageTitle={pageTitle}>
-  <p>Aqui ire publicando entradas sobre lo que voy aprendiendo con Astro.</p>
-  <ul>
-    {allPosts.map((post) => <BlogPost url={`/posts/${post.id}/`} title={post.data.title} />)}
+  <p>Aquí voy dejando mis reseñas de Spider-Man, era por era, según las voy escribiendo.</p>
+  <ul class="post-grid">
+    {
+      allPosts.map((post) => (
+        <BlogPost
+          url={`/posts/${post.id}/`}
+          title={post.data.title}
+          image={post.data.image.url}
+          pubDate={post.data.pubDate.toLocaleDateString('es-MX', { day: 'numeric', month: 'long', year: 'numeric' })}          tags={post.data.tags}
+        />
+      ))
+    }
   </ul>
 </BaseLayout>
+
+<style>
+  .post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.2rem;
+    padding: 0;
+    margin-top: 1.5rem;
+  }
+</style>

@@ -4,6 +4,46 @@ import Greeting from '../components/Greeting';
 const pageTitle = "Página de inicio";
 ---
 <BaseLayout pageTitle={pageTitle}>
-  <h2>El impresionante subtítulo de mi blog</h2>
-  <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
+  <div class="hero">
+    <div class="hero-text">
+      <p class="tag">Blog personal · Práctica de Astro</p>
+      <h2>Bienvenido a mi rincón sobre <span class="highlight">Spider-Man</span></h2>
+      <p>Aquí voy dejando mis reseñas de cada era del Hombre Araña en el cine: Tobey Maguire, Andrew Garfield, Tom Holland y Miles Morales.</p>
+      <Greeting client:load messages={["¡Con gran poder viene una gran responsabilidad!", "With great power comes great responsibility!", "Un grand pouvoir implique de grandes responsabilités!", "Un gran potere comporta una grande responsabilità!"]} />    </div>
+    <img src="/images/tom.jpg" alt="Spider-Man" class="hero-img" />
+  </div>
 </BaseLayout>
+
+<style>
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    background: linear-gradient(135deg, var(--hero-a), var(--hero-b));
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-top: 1.5rem;
+  }
+  .hero-text {
+    flex: 1;
+    min-width: 280px;
+  }
+  .tag {
+    color: var(--primary);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
+  .highlight {
+    color: var(--primary);
+  }
+  .hero-img {
+    width: 260px;
+    max-width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  }
+</style>

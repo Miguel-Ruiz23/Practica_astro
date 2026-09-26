@@ -14,21 +14,22 @@ const pageTitle = "Índice de etiquetas";
 </BaseLayout>
 
 <style>
-  a {
-    color: #00539F;
-  }
-
   .tags {
     display: flex;
     flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
   }
-
   .tag {
-    margin: 0.25em;
-    border: dotted 1px #a1a1a1;
-    border-radius: .5em;
-    padding: .5em 1em;
-    font-size: 1.15em;
-    background-color: #F8FCFD;
+    margin: 0;
+    border-radius: 999px;
+    padding: 0.5em 1.2em;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: var(--primary);
+  }
+  .tag a {
+    color: white;
+    text-decoration: none;
   }
 </style>

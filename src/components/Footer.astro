@@ -1,16 +1,21 @@
 ---
 import Social from './Social.astro';
 ---
+<footer>
+  <Social platform="github" username="Miguel-Ruiz23" />
+  <Social platform="instagram" username="hieloruiz" />
+</footer>
+<p class="disclaimer">Spider-Man es propiedad de Marvel/Sony. Las imágenes se usan aquí solo con fines ilustrativos/educativos.</p>
+
 <style>
   footer {
     display: flex;
     gap: 1rem;
     margin-top: 2rem;
   }
+  .disclaimer {
+    font-size: 0.8rem;
+    opacity: 0.6;
+    margin-top: 1rem;
+  }
 </style>
-
-<footer>
-  <Social platform="twitter" username="astrodotbuild" />
-  <Social platform="github" username="withastro" />
-  <Social platform="youtube" username="astrodotbuild" />
-</footer>

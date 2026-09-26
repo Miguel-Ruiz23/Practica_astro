@@ -1,13 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const pageTitle = "Sobre mi";
+const pageTitle = "Sobre mí";
 
 const identity = {
   firstName: "Miguel",
   country: "México",
-  occupation: "Estudiante",
-  hobbies: ["gimnasio", "videojuegos", "música"],
+  occupation: "Estudiante y fan de Spider-Man",
+  hobbies: ["ver películas de Spider-Man", "videojuegos", "música"],
 };
 
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro"];
@@ -21,9 +21,9 @@ const fontWeight = "bold";
 const textCase = "uppercase";
 ---
 <BaseLayout pageTitle={pageTitle}>
-  <h2>... ¡y mi nuevo sitio Astro!</h2>
-  <p>Estoy trabajando en el tutorial introductorio de Astro. Esta es la segunda página de mi sitio web, ¡y es la primera que he construido yo mismo!</p>
-  <p>Este sitio se irá actualizando a medida que vaya completando más partes del tutorial.</p>
+  <h2>Bienvenido a mi rincón sobre Spider-Man</h2>
+  <p>Este es mi blog donde reseño las distintas versiones de Spider-Man en el cine, saga por saga.</p>
+  <p>Este sitio se irá actualizando a medida que vaya viendo o revisando más películas.</p>
 
   <p>He aquí algunos datos sobre mí:</p>
   <ul>
@@ -45,7 +45,7 @@ const textCase = "uppercase";
 
   <style is:global define:vars={{skillColor, fontWeight, textCase}}>
     h1 {
-      color: purple;
+      color: #c8102e;
       font-size: 4rem;
     }
     .skill {

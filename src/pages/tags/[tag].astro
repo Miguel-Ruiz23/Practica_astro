@@ -1,12 +1,11 @@
 ---
 import { getCollection } from "astro:content";
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import BlogPost from '../../components/BlogPost.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogPost from "../../components/BlogPost.astro";
 
 export async function getStaticPaths() {
-    const allPosts = await getCollection("blog");
-
-    const uniqueTags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
+  const allPosts = await getCollection("blog");
+  const uniqueTags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
 
   return uniqueTags.map((tag) => {
     const filteredPosts = allPosts.filter((post) => post.data.tags.includes(tag));
@@ -21,8 +20,26 @@ const { tag } = Astro.params;
 const { posts } = Astro.props;
 ---
 <BaseLayout pageTitle={tag}>
-  <p>Entradas etiquetadas con {tag}</p>
-  <ul>
-    {posts.map((post) => <BlogPost url={`/posts/${post.id}/`} title={post.data.title}/>)}
+  <p>Publicaciones etiquetadas con {tag}</p>
+  <ul class="post-grid">
+    {posts.map((post) => (
+      <BlogPost
+        url={`/posts/${post.id}/`}
+        title={post.data.title}
+        image={post.data.image.url}
+        pubDate={post.data.pubDate.toLocaleDateString()}
+        tags={post.data.tags}
+      />
+    ))}
   </ul>
 </BaseLayout>
+
+<style>
+  .post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.2rem;
+    padding: 0;
+    margin-top: 1.5rem;
+  }
+</style>

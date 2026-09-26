@@ -1,23 +1,30 @@
 ---
-title: 'Mi primera publicación en el blog'
-pubDate: 2026-09-22
-description: 'Este es la primera publicación de mi nuevo blog Astro.'
-author: 'Alumno de Astro'
+title: 'Spider-Man con Tobey Maguire: la trilogía que lo empezó todo'
+pubDate: 2002-05-03
+description: 'Mi reseña de la trilogía original de Sam Raimi con Tobey Maguire como Peter Parker.'
+author: 'Miguel Ruiz'
 image:
-    url: 'https://docs.astro.build/assets/rose.webp'
-    alt: 'El logotipo de Astro sobre un fondo oscuro con un brillo rosado.'
-tags: ["astro", "bloguear", "aprender en público"]
+    url: '/images/tobey.jpg'
+    alt: 'Póster de Spider-Man (2002) con Tobey Maguire lanzando una telaraña.'
+tags: ["spiderman", "tobey maguire", "reseña", "trilogia raimi"]
 ---
-¡Bienvenido a mi _nuevo blog_ sobre el aprendizaje de Astro! Aquí, voy a compartir mi viaje de aprendizaje a medida que construyo un nuevo sitio web.
 
-## Lo que he conseguido
+La trilogía de Sam Raimi con Tobey Maguire fue mi primer contacto real con Spider-Man en el cine, y sigue siendo un referente incluso más de 20 años después.
 
-1. **Instalación de Astro**: En primer lugar, he creado un nuevo proyecto Astro y configurar mis cuentas en línea.
+## De qué trata
 
-2. **Creación de páginas**: Luego aprendí cómo hacer páginas creando nuevos archivos `.astro` y colocándolos en la carpeta `src/pages/`.
+Peter Parker, un estudiante torpe y bueno de corazón, es mordido por una araña genéticamente modificada y obtiene poderes arácnidos. A partir de ahí debe equilibrar su vida como superhéroe con sus problemas cotidianos: la universidad, el trabajo, y su relación con Mary Jane.
 
-3. **Creación de publicaciones**: ¡Esta es mi primera publicación! ¡Ahora tengo páginas de Astro y publicaciónes en Markdown!
+## Lo que más me gustó
 
-## Próximos pasos
+- El tono melodramático que le da Raimi, muy fiel al espíritu de los cómics clásicos.
+- Willem Dafoe como el Duende Verde en la primera película es una actuación memorable.
+- Spider-Man 2 es, para mí, la mejor de las tres: el arco del Doctor Octopus y el crecimiento de Peter como héroe están muy bien logrados.
 
-Terminaré el tutorial de Astro, y luego seguiré añadiendo más publicaciones. Mira este espacio para más por venir.
+## Lo que no me terminó de convencer
+
+Spider-Man 3 se siente sobrecargada de villanos (Duende Nuevo, Hombre de Arena, Venom) y el tono a veces se vuelve demasiado cómico para el resto de la saga.
+
+## Mi calificación
+
+Le doy un 8/10 a la trilogía en conjunto. Sentó las bases de lo que hoy conocemos como cine de superhéroes moderno.

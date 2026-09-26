@@ -1,6 +1,48 @@
+:root {
+  --primary: #0d47a1;
+  --primary-dark: #08306b;
+  --bg: #ffffff;
+  --text: #0d0d0d;
+  --card-bg: rgba(13, 71, 161, 0.06);
+  --card-border: rgba(13, 71, 161, 0.25);
+  --hero-a: rgba(13, 71, 161, 0.15);
+  --hero-b: rgba(200, 16, 46, 0.08);
+}
+
+html.dark {
+  --primary: #c8102e;
+  --primary-dark: #8e0000;
+  --bg: #0a0a0a;
+  --text: #ffffff;
+  --card-bg: rgba(200, 16, 46, 0.08);
+  --card-border: rgba(200, 16, 46, 0.3);
+  --hero-a: rgba(200, 16, 46, 0.18);
+  --hero-b: rgba(13, 71, 161, 0.10);
+}
+
+html {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+body {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 3rem;
+  font-family: system-ui, sans-serif;
+}
+
+h1, h2 {
+  letter-spacing: -0.5px;
+}
+
+a {
+  color: var(--primary);
+}
+
 /* estilos de la barra de navegación*/
 .menu {
-  background-color: #0d0950;
+  background-color: var(--primary);
   border: none;
   color: #fff;
   font-size: 1.2rem;
@@ -22,12 +64,13 @@
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
-  color: #0d0950;
+  color: var(--text);
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
-  background-color: #ff9776;
+  background-color: var(--primary);
+  color: #fff;
 }
 
 :has(.menu[aria-expanded="true"]) .nav-links {
@@ -51,22 +94,4 @@
   .menu {
     display: none;
   }
-  html.dark {
-	background-color: #0d0950;
-	color: #fff;
-}
-.dark .menu {
-	background-color: #fff;
-	color: #000;
-}
-.dark .nav-links a:hover,
-.dark .nav-links a:focus {
-	color: #0d0950;
-}
-.dark .nav-links a {
-	color: #fff;
-}
-.dark a {
-	color: #ff9776;
-}
 }
